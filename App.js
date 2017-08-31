@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import Config from 'react-native-config';
-import ForecastList from './jsx/ForecastList';
+import ForecastView from './jsx/ForecastView';
 
 export default class App extends Component {
   
   render() {
+    
+    let apiBaseUrl = Config.INTENSITY_API_BASE_URL
+    let apiKey = Config.INTENSITY_API_KEY
+    
     return (
       <View style={{flex: 1}}>
         <View style={styles.header}>
           <Text style={styles.headertext}>UK Grid Forecast</Text>
         </View>
-        <ForecastList />
+        <ForecastView apiBaseUrl={apiBaseUrl} apiKey={apiKey}/>
         <View style={styles.footer}>
           <Image style={styles.footerimage} source={{ uri: "https://www.edf.org/sites/all/themes/edf/images/footLogo.gif" }} />
           <Text style={styles.footertext}>Data from the National Grid</Text>

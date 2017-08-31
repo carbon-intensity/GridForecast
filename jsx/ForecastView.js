@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ScrollView, ActivityIndicator } from 'react-native';
 import ForecastBlock from './ForecastBlock';
 
-export default class ForecastList extends Component {
+export default class ForecastView extends Component {
   
   constructor(props) {
     super(props);
@@ -13,12 +13,10 @@ export default class ForecastList extends Component {
   }
   
   loadData(date) {
-    //let url = Config.INTENSITY_API_BASE_URL+"/national/2017-08-31"
-    let url = "https://9zot0ysfl7.execute-api.eu-west-2.amazonaws.com/v0/carbonintensity"+"/national/"+date
+    let url = this.props.apiBaseUrl+"/national/"+date
     return fetch( url, {
       headers: {
-        //'X-Api-Key': Config.INTENSITY_API_KEY,
-        'X-Api-Key': "5a7be25b-582c-4503-9743-4feec9812424",
+        'X-Api-Key': this.props.apiKey,
         'Accept': 'application/json',
       },
     })
