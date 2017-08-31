@@ -35,7 +35,8 @@ export default class ForecastView extends Component {
   }
   
   componentDidMount() {
-    return this.loadData("2017-09-01");
+    today = new Date();
+    return this.loadData(today.toISOString().split('T')[0]);
   }
 
   render() {
