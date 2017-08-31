@@ -1,93 +1,7 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, ScrollView, Image, ActivityIndicator } from 'react-native';
+import { Text, View, StyleSheet, Image } from 'react-native';
 import Config from 'react-native-config';
-
-class ForecastList extends Component {
-  
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoading: true,
-      data: []
-    }
-  }
-  
-  loadData(date) {
-    let url = Config.INTENSITY_API_BASE_URL+"/national/2017-08-31"
-    return fetch( url, {
-      headers: {
-        'X-Api-Key': Config.INTENSITY_API_KEY,
-        'Accept': 'application/json',
-      },
-    })
-    .then((response) => response.json())
-    .then((responseJson) => {
-      this.setState({
-        isLoading: false,
-        data: responseJson.data,
-      }, function() {
-
-      });
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-  }
-  
-  componentDidMount() {
-    return this.loadData("2017-09-01");
-  }
-
-  render() {
-    if (this.state.isLoading) {
-      return (
-        <ActivityIndicator style={{flex: 1}} />
-      );
-    } else {
-      let average = 250.0; // Fixed for now, needs to be obtained dynamically in some way.
-      blocks = []
-      for(item in this.state.data) {
-        condition = "normal"
-        colour = "orange"
-        if(this.state.data[item].carbonForecast > average + 20.0) {
-          condition = "high"
-          colour = "red"
-        }
-        if(this.state.data[item].carbonForecast < average - 20.0) {
-          condition = "low"
-          colour = "green"
-        }
-        blocks.push(
-          <ForecastBlock 
-            key={item}
-            value={this.state.data[item].carbonForecast}
-            condition={condition}
-            colour={colour}
-            period={this.state.data[item].settlementPeriod}
-            time={this.state.data[item].timeFrom.split(" ")[1]}            
-          />
-        )
-      }
-      return (        
-        <ScrollView horizontal style={{flex: 1}}>
-          {blocks}
-        </ScrollView>
-      );
-    }
-  }
-}
-
-class ForecastBlock extends Component {
-  render() {
-    return (
-      <View style={styles.forecast}>
-        <Text style={styles.forecastTime}>{this.props.time}</Text>
-        <Text style={[styles.forecastCondition, {color: this.props.colour}]}>{this.props.condition}</Text>
-        <Text style={styles.forecastValue}>{this.props.value}g/kWh</Text>
-      </View>
-    );
-  }
-}
+import ForecastList from './jsx/ForecastList';
 
 export default class App extends Component {
   
@@ -124,30 +38,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 30,
   },
-    
-  forecast: {
-    width: 100,
-    justifyContent: 'center',
-  },
   
-  forecastTime: {
-    fontSize: 20,
-    textAlign: 'center',
-  },
-  
-  forecastValue: {
-    fontSize: 10,
-    textAlign: 'center',
-  },
-
-  forecastCondition: {
-    paddingTop: 50,
-    paddingBottom: 50,
-    fontSize: 25,
-    fontWeight: 'bold',
-    textAlign: 'center',
-},
-
   footer: {
     height: 100,
     flexDirection: "row",
