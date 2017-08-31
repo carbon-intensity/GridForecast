@@ -12,7 +12,7 @@ class ForecastList extends Component {
     }
   }
   
-  componentDidMount() {
+  loadData(date) {
     let url = Config.INTENSITY_API_BASE_URL+"/national/2017-08-31"
     return fetch( url, {
       headers: {
@@ -32,6 +32,10 @@ class ForecastList extends Component {
     .catch((error) => {
       console.error(error);
     });
+  }
+  
+  componentDidMount() {
+    return this.loadData("2017-09-01");
   }
 
   render() {
@@ -141,7 +145,8 @@ const styles = StyleSheet.create({
     paddingBottom: 50,
     fontSize: 25,
     fontWeight: 'bold',
-  },
+    textAlign: 'center',
+},
 
   footer: {
     height: 100,
