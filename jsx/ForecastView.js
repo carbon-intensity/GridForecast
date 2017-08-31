@@ -57,16 +57,18 @@ export default class ForecastView extends Component {
           condition = "low"
           colour = "green"
         }
-        blocks.push(
-          <ForecastBlock 
-            key={item}
-            value={this.state.data[item].carbonForecast}
-            condition={condition}
-            colour={colour}
-            period={this.state.data[item].settlementPeriod}
-            time={this.state.data[item].timeFrom.split(" ")[1]}            
-          />
-        )
+        if (this.state.data[item].carbonOutturn == "") {
+          blocks.push(
+            <ForecastBlock 
+              key={item}
+              value={this.state.data[item].carbonForecast}
+              condition={condition}
+              colour={colour}
+              period={this.state.data[item].settlementPeriod}
+              time={this.state.data[item].timeFrom.split(" ")[1]}            
+            />
+          )
+        }
       }
       return (        
         <ScrollView horizontal style={{flex: 1}}>
