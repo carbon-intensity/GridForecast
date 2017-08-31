@@ -4224,6 +4224,12 @@ react-native-scripts@1.2.1:
     rimraf "^2.6.1"
     xdl "44.0.0"
 
+react-native-scrollable-tab-view@^0.6.7:
+  version "0.6.7"
+  resolved "https://registry.yarnpkg.com/react-native-scrollable-tab-view/-/react-native-scrollable-tab-view-0.6.7.tgz#3a5fe8a4bd5bc7eb023f306099323bbd9cc284a2"
+  dependencies:
+    react-timer-mixin "^0.13.3"
+
 react-native-svg@5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-5.3.0.tgz#0d2ca98bee6726d627c2ca31617ac9c5f7d42daf"
@@ -4351,7 +4357,7 @@ react-test-renderer@16.0.0-alpha.12:
     fbjs "^0.8.9"
     object-assign "^4.1.0"
 
-react-timer-mixin@^0.13.2:
+react-timer-mixin@^0.13.2, react-timer-mixin@^0.13.3:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/react-timer-mixin/-/react-timer-mixin-0.13.3.tgz#0da8b9f807ec07dc3e854d082c737c65605b3d22"
 

@@ -1,81 +1,45 @@
 import React, { Component } from 'react';
 import { ScrollView, ActivityIndicator } from 'react-native';
-import ForecastBlock from './ForecastBlock';
+import ScrollableTabView from 'react-native-scrollable-tab-view';
+import ForecastDayView from './ForecastDayView';
 
 export default class ForecastView extends Component {
   
   constructor(props) {
     super(props);
-    this.state = {
-      isLoading: true,
-      data: []
-    }
   }
   
-  loadData(date) {
-    let url = this.props.apiBaseUrl+"/national/"+date
-    return fetch( url, {
-      headers: {
-        'X-Api-Key': this.props.apiKey,
-        'Accept': 'application/json',
-      },
-    })
-    .then((response) => response.json())
-    .then((responseJson) => {
-      this.setState({
-        isLoading: false,
-        data: responseJson.data,
-      }, function() {
-
-      });
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-  }
-  
-  componentDidMount() {
-    today = new Date();
-    return this.loadData(today.toISOString().split('T')[0]);
-  }
-
   render() {
-    if (this.state.isLoading) {
-      return (
-        <ActivityIndicator style={{flex: 1}} />
-      );
-    } else {
-      let average = 250.0; // Fixed for now, needs to be obtained dynamically in some way.
-      blocks = []
-      for(item in this.state.data) {
-        condition = "normal"
-        colour = "orange"
-        if(this.state.data[item].carbonForecast > average + 20.0) {
-          condition = "high"
-          colour = "red"
-        }
-        if(this.state.data[item].carbonForecast < average - 20.0) {
-          condition = "low"
-          colour = "green"
-        }
-        if (this.state.data[item].carbonOutturn == "") {
-          blocks.push(
-            <ForecastBlock 
-              key={item}
-              value={this.state.data[item].carbonForecast}
-              condition={condition}
-              colour={colour}
-              period={this.state.data[item].settlementPeriod}
-              time={this.state.data[item].timeFrom.split(" ")[1]}            
-            />
-          )
-        }
-      }
-      return (        
-        <ScrollView horizontal style={{flex: 1}}>
-          {blocks}
-        </ScrollView>
-      );
-    }
+    var today = new Date();
+    var tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    var later = new Date();
+    later.setDate(later.getDate() + 2);
+
+    return (        
+      <ScrollableTabView>
+        <ForecastDayView 
+          date={today.toISOString().split('T')[0]} 
+          style={{flex: 1}} 
+          tabLabel='today'
+          apiBaseUrl={this.props.apiBaseUrl}
+          apiKey={this.props.apiKey}
+        />
+        <ForecastDayView 
+          date={tomorrow.toISOString().split('T')[0]} 
+          style={{flex: 1}} 
+          tabLabel='tomorrow'
+          apiBaseUrl={this.props.apiBaseUrl}
+          apiKey={this.props.apiKey}
+        />
+        <ForecastDayView 
+          date={later.toISOString().split('T')[0]} 
+          style={{flex: 1}} 
+          tabLabel='later'
+          apiBaseUrl={this.props.apiBaseUrl}
+          apiKey={this.props.apiKey}
+        />
+      </ScrollableTabView>
+    );
   }
 }
