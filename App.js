@@ -18,7 +18,7 @@ export default class App extends Component {
         <ForecastView apiBaseUrl={apiBaseUrl} apiKey={apiKey}/>
         <View style={styles.footer}>
           <Image style={styles.footerimage} source={{ uri: "https://www.edf.org/sites/all/themes/edf/images/footLogo.gif" }} />
-          <Text style={styles.footertext}>Data from the National Grid</Text>
+          <Text style={styles.footertext}>Data provided by the National Grid. Visit carbonintensity.org.uk for details.</Text>
         </View>
       </View>
     );
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   },
   
   footer: {
-    height: 100,
+    height: 80,
     flexDirection: "row",
     backgroundColor: '#d8e8f4',
     alignItems: 'center',
@@ -55,14 +55,14 @@ const styles = StyleSheet.create({
   footertext: {
     flex: 1,
     color: 'black',
-    paddingLeft: 20,
-    paddingRight: 20,
+    marginLeft: 10,
+    marginRight: 10,
   },
 
   footerimage: {
-    flex: 1,
-    height: 55,
-    width: 154,
+    height: 60,
+    width: 170,
+    marginLeft: 10,
   },
 
 });
