@@ -26,8 +26,12 @@ export default class ForecastBlock extends Component {
     },
     
     forecastValue: {
-      fontSize: 10,
+      fontSize: 20,
       textAlign: 'center',
+      color: 'white',
+      fontWeight: 'bold',
+      paddingTop: 10,
+      paddingBottom: 10,
     },
 
     forecastCondition: {
