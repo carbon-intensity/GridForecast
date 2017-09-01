@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
   },
   
   footertext: {
+    fontSize: 11,
     flex: 1,
     color: 'black',
     marginLeft: 10,
