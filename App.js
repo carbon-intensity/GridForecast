@@ -44,6 +44,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 30,
   },
+
+  container: {
+    flex: 1,
+    width: null,
+    height: null,
+  },
   
   footer: {
     height: 80,
