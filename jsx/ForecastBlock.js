@@ -12,9 +12,11 @@ export default class ForecastBlock extends Component {
         <Text style={[this.styles.forecastCondition, {color: this.props.colour}]}>
           {this.props.condition}
         </Text>
-        <Text style={[this.styles.forecastValue, {backgroundColor: this.props.colour}]}>
-          {this.props.value}
-        </Text>
+        <View style={{marginLeft: 20, marginRight: 20}}>
+          <Text style={[this.styles.forecastValue, {backgroundColor: this.props.colour}]}>
+            {this.props.value}
+          </Text>
+        </View>
       </View>
     );
   }
@@ -43,10 +45,9 @@ export default class ForecastBlock extends Component {
     },
 
     forecastCondition: {
-      paddingTop: 50,
-      paddingBottom: 50,
-      fontSize: 25,
-      fontWeight: 'bold',
+      marginTop: 20,
+      marginBottom: 20,
+      fontSize: 50,
       textAlign: 'center',
     },
 

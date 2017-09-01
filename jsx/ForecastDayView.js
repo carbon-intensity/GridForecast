@@ -48,14 +48,14 @@ export default class ForecastDayView extends Component {
       let average = 250.0; // Fixed for now, needs to be obtained dynamically in some way.
       blocks = []
       for(item in this.state.data) {
-        condition = "normal"
+        condition = "🌤"
         colour = "orange"
         if(this.state.data[item].carbonForecast > average + 20.0) {
-          condition = "high"
+          condition = "☁"
           colour = "red"
         }
         if(this.state.data[item].carbonForecast < average - 20.0) {
-          condition = "low"
+          condition = "☀"
           colour = "green"
         }
         if (this.state.data[item].carbonOutturn == "") {
@@ -84,7 +84,7 @@ export default class ForecastDayView extends Component {
             <Text style={this.styles.day}>{day}</Text>
             <Text style={this.styles.date}>{date}</Text>
           </View>
-          <ScrollView horizontal style={{flex: 1}}>
+          <ScrollView horizontal style={{flex: 1, backgroundColor: 'rgba(255,255,255,0.25)'}}>
             {blocks}
           </ScrollView>
         </View>        
@@ -97,6 +97,7 @@ export default class ForecastDayView extends Component {
     dayContainer: {
       backgroundColor: 'transparent',
       marginLeft: 10,
+      marginBottom: 10,
     },
     
     day: {
