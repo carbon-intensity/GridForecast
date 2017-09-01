@@ -15,7 +15,9 @@ export default class App extends Component {
         <View style={styles.header}>
           <Text style={styles.headertext}>UK Grid Forecast</Text>
         </View>
-        <ForecastView apiBaseUrl={apiBaseUrl} apiKey={apiKey}/>
+        <Image source={require('./assets/images/background.jpg')} style={styles.container}>
+          <ForecastView apiBaseUrl={apiBaseUrl} apiKey={apiKey}/>
+        </Image>
         <View style={styles.footer}>
           <Image style={styles.footerimage} source={{ uri: "https://www.edf.org/sites/all/themes/edf/images/footLogo.gif" }} />
           <Text style={styles.footertext}>Data provided by the National Grid. Visit carbonintensity.org.uk for details.</Text>
