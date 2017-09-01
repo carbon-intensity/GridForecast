@@ -29,6 +29,8 @@ export default class ForecastBlock extends Component {
     forecastTime: {
       fontSize: 20,
       textAlign: 'center',
+      backgroundColor: 'transparent',
+      fontWeight: 'bold',
     },
     
     forecastValue: {
