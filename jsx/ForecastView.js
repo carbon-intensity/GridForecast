@@ -17,7 +17,12 @@ export default class ForecastView extends Component {
     later.setDate(later.getDate() + 2);
 
     return (        
-      <ScrollableTabView tabBarBackgroundColor='white'>
+      <ScrollableTabView 
+        tabBarBackgroundColor='white'
+        tabBarActiveTextColor='rgb(38,121,173)'
+        tabBarInactiveTextColor='rgb(38,121,173)'
+        tabBarUnderlineStyle={{backgroundColor: 'rgb(38,121,173)'}}
+      >
         <ForecastDayView 
           date={today.toISOString().split('T')[0]} 
           style={{flex: 1}} 
