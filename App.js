@@ -19,8 +19,8 @@ export default class App extends Component {
           <ForecastView apiBaseUrl={apiBaseUrl} apiKey={apiKey}/>
         </Image>
         <View style={styles.footer}>
-          <Image style={styles.footerimage} source={{ uri: "https://www.edf.org/sites/all/themes/edf/images/footLogo.gif" }} />
-          <Text style={styles.footertext}>Data provided by the National Grid. Visit carbonintensity.org.uk for details.</Text>
+          <Image style={styles.footerimage} source={require('./assets/images/edflogo.png')} />
+          <Text style={styles.footertext}>This app shows the forecast carbon intensity of UK electricity in gCO2e/kWh. Lower numbers mean your electricity is greener. Data provided by the National Grid. Visit carbonintensity.org.uk for details.</Text>
         </View>
       </View>
     );
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   },
   
   footertext: {
-    fontSize: 11,
+    fontSize: 9,
     flex: 1,
     color: 'black',
     marginLeft: 10,
@@ -69,8 +69,8 @@ const styles = StyleSheet.create({
   },
 
   footerimage: {
-    height: 60,
-    width: 170,
+    height: 35,
+    width: 100,
     marginLeft: 10,
   },
 
