@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView, ActivityIndicator } from 'react-native';
+import { View, Text, ScrollView, ActivityIndicator, StyleSheet } from 'react-native';
 import ForecastBlock from './ForecastBlock';
 
 export default class ForecastDayView extends Component {
@@ -71,13 +71,45 @@ export default class ForecastDayView extends Component {
           )
         }
       }
+      
+      var dateObj = new Date(this.props.date)
+      var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      day = dayNames[dateObj.getDay()]
+      date = dateObj.getDate().toString() + " " + monthNames[dateObj.getMonth()]
+      
       return (
-        <View>
-          <ScrollView horizontal>
+        <View style={{flex: 1}}>
+          <View style={this.styles.dayContainer}>
+            <Text style={this.styles.day}>{day}</Text>
+            <Text style={this.styles.date}>{date}</Text>
+          </View>
+          <ScrollView horizontal style={{flex: 1}}>
             {blocks}
           </ScrollView>
         </View>        
       );
     }
   }
+  
+  styles = StyleSheet.create({
+      
+    dayContainer: {
+      backgroundColor: 'transparent',
+      marginLeft: 10,
+    },
+    
+    day: {
+      fontSize: 50,
+      fontWeight: 'bold',
+      color: 'white',
+    },
+
+    date: {
+      fontSize: 20,
+      color: 'grey',
+    },
+
+  });
+
 }
