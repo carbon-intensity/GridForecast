@@ -6,9 +6,15 @@ export default class ForecastBlock extends Component {
   render() {
     return (
       <View style={this.styles.forecast}>
-        <Text style={this.styles.forecastTime}>{this.props.time}</Text>
-        <Text style={[this.styles.forecastCondition, {color: this.props.colour}]}>{this.props.condition}</Text>
-        <Text style={this.styles.forecastValue}>{this.props.value}g/kWh</Text>
+        <Text style={this.styles.forecastTime}>
+          {this.props.time}
+        </Text>
+        <Text style={[this.styles.forecastCondition, {color: this.props.colour}]}>
+          {this.props.condition}
+        </Text>
+        <Text style={[this.styles.forecastValue, {backgroundColor: this.props.colour}]}>
+          {this.props.value}
+        </Text>
       </View>
     );
   }
