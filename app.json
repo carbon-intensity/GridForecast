@@ -1,5 +1,15 @@
 {
   "expo": {
-    "sdkVersion": "20.0.0"
+    "name": "GridForecast",
+    "icon": "./assets/images/icon.png",
+    "version": "0.1.0",
+    "slug": "grid-forecast",
+    "sdkVersion": "20.0.0",
+    "ios": {
+      "bundleIdentifier": "org.carbonintensity.gridforecast"
+    },
+    "android": {
+      "package": "org.carbonintensity.gridforecast"
+    }
   }
 }
