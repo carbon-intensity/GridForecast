@@ -40,7 +40,9 @@ yarn run exp build:ios | build:android
 yarn run build:status
 ```
 
+## Using the carbon intensity API
 
+The sample code that actually calls the carbon intensity API is in the `/jsx/ForecastDayView.js` file.
 
 ## Credits
 
