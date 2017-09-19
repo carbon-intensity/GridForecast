@@ -9,7 +9,7 @@ export default class App extends Component {
     
     let apiBaseUrl = Config.INTENSITY_API_BASE_URL
     
-    apiBaseUrl = "https://9zot0ysfl7.execute-api.eu-west-2.amazonaws.com/v0/carbonintensity"
+    apiBaseUrl = "https://k1nehbcl85.execute-api.eu-west-2.amazonaws.com/v1"
 
     return (
       <View style={{flex: 1}}>
