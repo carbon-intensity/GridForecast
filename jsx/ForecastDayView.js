@@ -13,7 +13,7 @@ export default class ForecastDayView extends Component {
   }
   
   loadData() {
-    let url = this.props.apiBaseUrl+"/national/"+this.props.date
+    let url = this.props.apiBaseUrl+"/intensity/date/"+this.props.date
     return fetch( url, {
       headers: {
         'Accept': 'application/json',
@@ -57,15 +57,14 @@ export default class ForecastDayView extends Component {
           condition = "☀"
           colour = "green"
         }
-        if (this.state.data[item].carbonOutturn == "") {
+        if (this.state.data[item].intensity.actual == null) {
           blocks.push(
             <ForecastBlock 
               key={item}
-              value={this.state.data[item].carbonForecast}
+              value={this.state.data[item].intensity.forecast}
               condition={condition}
               colour={colour}
-              period={this.state.data[item].settlementPeriod}
-              time={this.state.data[item].timeFrom.split(" ")[1]}            
+              time={this.state.data[item].from.split("T")[1]}
             />
           )
         }
