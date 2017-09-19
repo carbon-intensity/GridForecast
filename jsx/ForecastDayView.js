@@ -51,19 +51,19 @@ export default class ForecastDayView extends Component {
         colour = "orange"
         switch(this.state.data[item].intensity.index) {
           case "very high":
-            condition = "😠"
+            condition = "😡"
             colour = "red"
             break;
           case "high":
-            condition = "🙁"
+            condition = "😦"
             colour = "orangered"
             break;
           case "low":
-            condition = "🙂"
+            condition = "😃"
             colour = "yellowgreen"
             break;
           case "very low":
-            condition = "😃"
+            condition = "😁"
             colour = "green"
             break;
         }
