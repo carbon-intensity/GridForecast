@@ -16,7 +16,6 @@ export default class ForecastDayView extends Component {
     let url = this.props.apiBaseUrl+"/national/"+this.props.date
     return fetch( url, {
       headers: {
-        'X-Api-Key': this.props.apiKey,
         'Accept': 'application/json',
       },
     })

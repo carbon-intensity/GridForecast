@@ -8,15 +8,16 @@ export default class App extends Component {
   render() {
     
     let apiBaseUrl = Config.INTENSITY_API_BASE_URL
-    let apiKey = Config.INTENSITY_API_KEY
     
+    apiBaseUrl = "https://9zot0ysfl7.execute-api.eu-west-2.amazonaws.com/v0/carbonintensity"
+
     return (
       <View style={{flex: 1}}>
         <View style={styles.header}>
           <Text style={styles.headertext}>UK Grid Forecast</Text>
         </View>
         <Image source={require('./assets/images/background.jpg')} style={styles.container}>
-          <ForecastView apiBaseUrl={apiBaseUrl} apiKey={apiKey}/>
+          <ForecastView apiBaseUrl={apiBaseUrl}/>
         </Image>
         <View style={styles.footer}>
           <Image style={styles.footerimage} source={require('./assets/images/edflogo.png')} />

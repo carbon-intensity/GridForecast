@@ -28,21 +28,18 @@ export default class ForecastView extends Component {
           style={{flex: 1}} 
           tabLabel='today'
           apiBaseUrl={this.props.apiBaseUrl}
-          apiKey={this.props.apiKey}
         />
         <ForecastDayView 
           date={tomorrow.toISOString().split('T')[0]} 
           style={{flex: 1}} 
           tabLabel='tomorrow'
           apiBaseUrl={this.props.apiBaseUrl}
-          apiKey={this.props.apiKey}
         />
         <ForecastDayView 
           date={later.toISOString().split('T')[0]} 
           style={{flex: 1}} 
           tabLabel='later'
           apiBaseUrl={this.props.apiBaseUrl}
-          apiKey={this.props.apiKey}
         />
       </ScrollableTabView>
     );

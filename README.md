@@ -15,7 +15,6 @@ You should create a file called .env containing:
 
 ```
 INTENSITY_API_BASE_URL=https://{api-host}/v0/carbonintensity/
-INTENSITY_API_KEY={your-api-key}
 ```
 
 ### Running the app
