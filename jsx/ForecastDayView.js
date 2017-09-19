@@ -47,15 +47,25 @@ export default class ForecastDayView extends Component {
       let average = 250.0; // Fixed for now, needs to be obtained dynamically in some way.
       blocks = []
       for(item in this.state.data) {
-        condition = "🌤"
+        condition = "😐"
         colour = "orange"
-        if(this.state.data[item].carbonForecast > average + 20.0) {
-          condition = "☁"
-          colour = "red"
-        }
-        if(this.state.data[item].carbonForecast < average - 20.0) {
-          condition = "☀"
-          colour = "green"
+        switch(this.state.data[item].intensity.index) {
+          case "very high":
+            condition = "😠"
+            colour = "red"
+            break;
+          case "high":
+            condition = "🙁"
+            colour = "orangered"
+            break;
+          case "low":
+            condition = "🙂"
+            colour = "yellowgreen"
+            break;
+          case "very low":
+            condition = "😃"
+            colour = "green"
+            break;
         }
         if (this.state.data[item].intensity.actual == null) {
           blocks.push(
