@@ -68,13 +68,14 @@ export default class ForecastDayView extends Component {
             break;
         }
         if (this.state.data[item].intensity.actual == null) {
+          time = new Date(this.state.data[item].from);
           blocks.push(
             <ForecastBlock 
               key={item}
               value={this.state.data[item].intensity.forecast}
               condition={condition}
               colour={colour}
-              time={this.state.data[item].from.split("T")[1]}
+              time={time.toLocaleTimeString("en-GB", {hour: '2-digit', minute:'2-digit'})}
             />
           )
         }
