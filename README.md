@@ -2,7 +2,7 @@
 
 A demonstration app for the [National Grid carbon intensity API](http://carbonintensity.org.uk/), built in React Native.
 
-![Screnshot](https://user-images.githubusercontent.com/3565/30617245-12806b52-9d8d-11e7-8125-68398aedd521.png)
+![Screnshot](./docs/images/screenshot.png)
 
 ## Development
 
