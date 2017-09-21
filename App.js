@@ -18,7 +18,7 @@ export default class App extends Component {
         </Image>
         <View style={styles.footer}>
           <Image style={styles.footerimage} source={require('./assets/images/edflogo.png')} />
-          <Text style={styles.footertext}>This app shows the forecast carbon intensity of UK electricity in gCO2e/kWh. Lower numbers mean your electricity is greener. Data provided by the National Grid. Visit carbonintensity.org.uk for details.</Text>
+          <Text style={styles.footertext}>This app shows the forecast carbon intensity of UK electricity in gCO2/kWh. Lower numbers mean your electricity is greener. Data provided by the National Grid. Visit carbonintensity.org.uk for details.</Text>
         </View>
       </View>
     );
