@@ -1,5 +1,9 @@
 # GridForecast
 
+[![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)]() [![Dependency Status](https://dependencyci.com/github/carbon-intensity/GridForecast/badge)](https://dependencyci.com/github/carbon-intensity/GridForecast)
+[![Code Climate](https://img.shields.io/codeclimate/github/carbon-intensity/GridForecast.svg)]()
+[![license](https://img.shields.io/github/license/carbon-intensity/GridForecast.svg)]()
+
 A demonstration app for the [National Grid carbon intensity API](http://carbonintensity.org.uk/), built in React Native.
 
 ![Screnshot](./docs/images/screenshot.png)
