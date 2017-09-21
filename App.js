@@ -11,7 +11,7 @@ export default class App extends Component {
     return (
       <View style={{flex: 1}}>
         <View style={styles.header}>
-          <Text style={styles.headertext}>GB Grid Forecast</Text>
+          <Text style={styles.headertext}>Green Electricity Forecast</Text>
         </View>
         <Image source={require('./assets/images/background.jpg')} style={styles.container}>
           <ForecastView apiBaseUrl={apiBaseUrl}/>
