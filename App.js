@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
-import Config from 'react-native-config';
 import ForecastView from './jsx/ForecastView';
 
 export default class App extends Component {
   
   render() {
     
-    let apiBaseUrl = Config.INTENSITY_API_BASE_URL
-    
-    apiBaseUrl = "https://k1nehbcl85.execute-api.eu-west-2.amazonaws.com/v1"
+    let apiBaseUrl = "https://k1nehbcl85.execute-api.eu-west-2.amazonaws.com/v1"
 
     return (
       <View style={{flex: 1}}>

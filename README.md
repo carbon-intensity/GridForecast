@@ -11,14 +11,6 @@ A demonstration app for the [National Grid carbon intensity API](http://carbonin
 * NodeJS
 * Yarn
 
-### Environment Variables
-
-You should create a file called .env containing:
-
-```
-INTENSITY_API_BASE_URL=https://{api-host}/v0/carbonintensity/
-```
-
 ### Running the app
 
 The app uses [Expo](http://expo.io/) for development. Install the Expo app on your phone, then run:
