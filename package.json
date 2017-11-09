@@ -20,7 +20,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "expo": "^22.0.2",
+    "expo": "^22.0.3",
     "react": "16.0.0",
     "react-native": "^0.49.5",
     "react-native-scrollable-tab-view": "^0.8.0"
