@@ -61,6 +61,14 @@
   dependencies:
     cross-spawn "^5.1.0"
 
+"@expo/traveling-fastlane-darwin@^1.0.12":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@expo/traveling-fastlane-darwin/-/traveling-fastlane-darwin-1.0.15.tgz#c48a0c74467df600621c55c03e87649c3aff234e"
+
+"@expo/traveling-fastlane-linux@^1.0.12":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@expo/traveling-fastlane-linux/-/traveling-fastlane-linux-1.0.15.tgz#660b332b2c4fc507622fc92094aea7c920711dec"
+
 "@expo/vector-icons@^6.2.0":
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/@expo/vector-icons/-/vector-icons-6.2.0.tgz#1269b263c3d78609cfa5e65b9b524aeb4718c335"
@@ -2014,8 +2022,8 @@ exit-hook@^1.0.0:
   resolved "https://registry.yarnpkg.com/exit-hook/-/exit-hook-1.1.1.tgz#f05ca233b48c05d54fff07765df8507e95c02ff8"
 
 exp@*:
-  version "46.0.3"
-  resolved "https://registry.yarnpkg.com/exp/-/exp-46.0.3.tgz#f38d66f2ad5e1c189c06db9c4ba4daf0983b64d7"
+  version "46.0.4"
+  resolved "https://registry.yarnpkg.com/exp/-/exp-46.0.4.tgz#69de44ea0236e32ce59c879cf40366c3f981fc49"
   dependencies:
     "@expo/bunyan" "^1.8.10"
     "@expo/json-file" "^5.2.0"
@@ -2036,8 +2044,12 @@ exp@*:
     qrcode-terminal "^0.11.0"
     semver "^5.0.1"
     source-map-support "^0.4.1"
+    tmp "^0.0.33"
     untildify "^3.0.2"
-    xdl "47.0.1"
+    xdl "47.0.5"
+  optionalDependencies:
+    "@expo/traveling-fastlane-darwin" "^1.0.12"
+    "@expo/traveling-fastlane-linux" "^1.0.12"
 
 expand-brackets@^0.1.4:
   version "0.1.5"
@@ -2780,6 +2792,10 @@ iconv-lite@0.4.15:
 iconv-lite@0.4.18, iconv-lite@^0.4.17, iconv-lite@~0.4.13:
   version "0.4.18"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.18.tgz#23d8656b16aae6742ac29732ea8f0336a4789cf2"
+
+idx@^2.1.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/idx/-/idx-2.2.0.tgz#8544749f9faba6409822b5d9488ba5bc77b8fbfe"
 
 image-size@^0.6.0:
   version "0.6.1"
@@ -4336,7 +4352,7 @@ os-shim@^0.1.2:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/os-shim/-/os-shim-0.1.3.tgz#6b62c3791cf7909ea35ed46e17658bb417cb3917"
 
-os-tmpdir@^1.0.0, os-tmpdir@^1.0.1, os-tmpdir@~1.0.1:
+os-tmpdir@^1.0.0, os-tmpdir@^1.0.1, os-tmpdir@~1.0.1, os-tmpdir@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
 
@@ -5789,6 +5805,12 @@ tmp@^0.0.31:
   dependencies:
     os-tmpdir "~1.0.1"
 
+tmp@^0.0.33:
+  version "0.0.33"
+  resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
+  dependencies:
+    os-tmpdir "~1.0.2"
+
 tmpl@1.0.x:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
@@ -6243,9 +6265,9 @@ xdl@46.0.1:
     xmldom "^0.1.27"
     yesno "^0.0.1"
 
-xdl@47.0.1:
-  version "47.0.1"
-  resolved "https://registry.yarnpkg.com/xdl/-/xdl-47.0.1.tgz#ae322ca562edcc4e9e59e79f14495f8f0aeb73fd"
+xdl@47.0.5:
+  version "47.0.5"
+  resolved "https://registry.yarnpkg.com/xdl/-/xdl-47.0.5.tgz#5d58a637ab365185cbd056505ab232305a2990a1"
   dependencies:
     "@expo/bunyan" "^1.8.10"
     "@expo/json-file" "^5.3.0"
@@ -6273,6 +6295,7 @@ xdl@47.0.1:
     globby "^6.1.0"
     hasbin "^1.2.3"
     home-dir "^1.0.0"
+    idx "^2.1.0"
     indent-string "^3.1.0"
     instapromise "2.0.7-rc.1"
     joi "^10.0.2"
@@ -6281,6 +6304,7 @@ xdl@47.0.1:
     jsonwebtoken "^7.2.1"
     lodash "^4.14.1"
     md5hex "^1.0.0"
+    minimatch "^3.0.4"
     mkdirp "^0.5.1"
     mkdirp-promise "^5.0.0"
     mv "^2.1.1"
