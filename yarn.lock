@@ -2053,8 +2053,8 @@ exit-hook@^1.0.0:
   resolved "https://registry.yarnpkg.com/exit-hook/-/exit-hook-1.1.1.tgz#f05ca233b48c05d54fff07765df8507e95c02ff8"
 
 exp@*:
-  version "46.0.5"
-  resolved "https://registry.yarnpkg.com/exp/-/exp-46.0.5.tgz#fe5cffdaf9a0a11f2ca16e7c71323408731cb141"
+  version "46.0.6"
+  resolved "https://registry.yarnpkg.com/exp/-/exp-46.0.6.tgz#b470c600b4c8aae031939b93ac9386b4843b10a6"
   dependencies:
     "@expo/bunyan" "^1.8.10"
     "@expo/json-file" "^5.2.0"
@@ -2074,6 +2074,7 @@ exp@*:
     progress "^2.0.0"
     qrcode-terminal "^0.11.0"
     semver "^5.0.1"
+    slash "^1.0.0"
     source-map-support "^0.4.1"
     tmp "^0.0.33"
     untildify "^3.0.2"
