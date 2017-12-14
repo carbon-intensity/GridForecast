@@ -2053,8 +2053,8 @@ exit-hook@^1.0.0:
   resolved "https://registry.yarnpkg.com/exit-hook/-/exit-hook-1.1.1.tgz#f05ca233b48c05d54fff07765df8507e95c02ff8"
 
 exp@*:
-  version "46.0.6"
-  resolved "https://registry.yarnpkg.com/exp/-/exp-46.0.6.tgz#b470c600b4c8aae031939b93ac9386b4843b10a6"
+  version "47.1.1"
+  resolved "https://registry.yarnpkg.com/exp/-/exp-47.1.1.tgz#f92c2a5a1364916592abef640496656455d8bbef"
   dependencies:
     "@expo/bunyan" "^1.8.10"
     "@expo/json-file" "^5.2.0"
@@ -2066,6 +2066,7 @@ exp@*:
     commander "^2.9.0"
     delay-async "^1.0.0"
     es6-error "^3.0.0"
+    fs-extra "^4.0.2"
     glob "^7.0.3"
     indent-string "^3.1.0"
     inquirer "^2.0.0"
@@ -2078,7 +2079,7 @@ exp@*:
     source-map-support "^0.4.1"
     tmp "^0.0.33"
     untildify "^3.0.2"
-    xdl "47.0.6"
+    xdl "47.1.1"
   optionalDependencies:
     "@expo/traveling-fastlane-darwin" "^1.0.15"
     "@expo/traveling-fastlane-linux" "^1.0.15"
@@ -5000,6 +5001,15 @@ react@16.1.1:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
+react@^16.0.0:
+  version "16.2.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
+
 read-chunk@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/read-chunk/-/read-chunk-2.1.0.tgz#6a04c0928005ed9d42e1a6ac5600e19cbc7ff655"
@@ -6383,9 +6393,9 @@ xdl@47.0.4:
     xmldom "^0.1.27"
     yesno "^0.0.1"
 
-xdl@47.0.6:
-  version "47.0.6"
-  resolved "https://registry.yarnpkg.com/xdl/-/xdl-47.0.6.tgz#069472a00ee09ddaa1f58ba3e40ed8872a2ce79b"
+xdl@47.1.1:
+  version "47.1.1"
+  resolved "https://registry.yarnpkg.com/xdl/-/xdl-47.1.1.tgz#571a7c475d27ed8b027b742f3389e496912dc193"
   dependencies:
     "@expo/bunyan" "^1.8.10"
     "@expo/json-file" "^5.3.0"
@@ -6431,9 +6441,11 @@ xdl@47.0.6:
     ncp "^2.0.0"
     opn "^4.0.2"
     plist "2.1.0"
+    prop-types "^15.5.10"
     querystring "^0.2.0"
     raven "^2.1.1"
     raven-js "^3.17.0"
+    react "^16.0.0"
     react-redux "^5.0.2"
     read-chunk "^2.0.0"
     redux "^3.6.0"
