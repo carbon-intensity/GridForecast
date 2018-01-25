@@ -61,13 +61,13 @@
   dependencies:
     cross-spawn "^5.1.0"
 
-"@expo/traveling-fastlane-darwin@^1.0.15":
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/@expo/traveling-fastlane-darwin/-/traveling-fastlane-darwin-1.0.15.tgz#c48a0c74467df600621c55c03e87649c3aff234e"
+"@expo/traveling-fastlane-darwin@1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@expo/traveling-fastlane-darwin/-/traveling-fastlane-darwin-1.2.5.tgz#45c7d71bfb2227599856cb319b7ac50b6cd7e4d0"
 
-"@expo/traveling-fastlane-linux@^1.0.15":
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/@expo/traveling-fastlane-linux/-/traveling-fastlane-linux-1.0.15.tgz#660b332b2c4fc507622fc92094aea7c920711dec"
+"@expo/traveling-fastlane-linux@1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@expo/traveling-fastlane-linux/-/traveling-fastlane-linux-1.2.5.tgz#32f4c3636c84faef53989a052cab32f783d9129b"
 
 "@expo/vector-icons@^6.2.0":
   version "6.2.0"
@@ -1397,6 +1397,10 @@ cli-cursor@^2.1.0:
   dependencies:
     restore-cursor "^2.0.0"
 
+cli-spinners@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/cli-spinners/-/cli-spinners-1.1.0.tgz#f1847b168844d917a671eb9d147e3df497c90d06"
+
 cli-table@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/cli-table/-/cli-table-0.3.1.tgz#f53b05266a8b1a0b934b3d0821e6e2dc5914ae23"
@@ -2053,8 +2057,8 @@ exit-hook@^1.0.0:
   resolved "https://registry.yarnpkg.com/exit-hook/-/exit-hook-1.1.1.tgz#f05ca233b48c05d54fff07765df8507e95c02ff8"
 
 exp@*:
-  version "46.0.6"
-  resolved "https://registry.yarnpkg.com/exp/-/exp-46.0.6.tgz#b470c600b4c8aae031939b93ac9386b4843b10a6"
+  version "48.0.4"
+  resolved "https://registry.yarnpkg.com/exp/-/exp-48.0.4.tgz#d1971a65a7475871e6171c5bbee7063c7ca71213"
   dependencies:
     "@expo/bunyan" "^1.8.10"
     "@expo/json-file" "^5.2.0"
@@ -2066,22 +2070,23 @@ exp@*:
     commander "^2.9.0"
     delay-async "^1.0.0"
     es6-error "^3.0.0"
+    fs-extra "^4.0.2"
     glob "^7.0.3"
     indent-string "^3.1.0"
     inquirer "^2.0.0"
     lodash "^4.17.4"
     mz "^2.6.0"
+    ora "^1.3.0"
     progress "^2.0.0"
     qrcode-terminal "^0.11.0"
     semver "^5.0.1"
     slash "^1.0.0"
     source-map-support "^0.4.1"
-    tmp "^0.0.33"
     untildify "^3.0.2"
-    xdl "47.0.6"
+    xdl "48.0.1"
   optionalDependencies:
-    "@expo/traveling-fastlane-darwin" "^1.0.15"
-    "@expo/traveling-fastlane-linux" "^1.0.15"
+    "@expo/traveling-fastlane-darwin" "1.2.5"
+    "@expo/traveling-fastlane-linux" "1.2.5"
 
 expand-brackets@^0.1.4:
   version "0.1.5"
@@ -3819,6 +3824,12 @@ lodash@~2.4.1:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-2.4.2.tgz#fadd834b9683073da179b3eae6d9c0d15053f73e"
 
+log-symbols@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/log-symbols/-/log-symbols-1.0.2.tgz#376ff7b58ea3086a0f09facc74617eca501e1a18"
+  dependencies:
+    chalk "^1.0.0"
+
 logfmt@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/logfmt/-/logfmt-1.2.0.tgz#1ccc067c1cfe65f3ecf5856c09d2654f69203572"
@@ -4377,6 +4388,15 @@ options@>=0.0.5:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/options/-/options-0.0.6.tgz#ec22d312806bb53e731773e7cdaefcf1c643128f"
 
+ora@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/ora/-/ora-1.3.0.tgz#80078dd2b92a934af66a3ad72a5b910694ede51a"
+  dependencies:
+    chalk "^1.1.1"
+    cli-cursor "^2.1.0"
+    cli-spinners "^1.0.0"
+    log-symbols "^1.0.2"
+
 os-homedir@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-homedir/-/os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
@@ -4406,7 +4426,7 @@ os-shim@^0.1.2:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/os-shim/-/os-shim-0.1.3.tgz#6b62c3791cf7909ea35ed46e17658bb417cb3917"
 
-os-tmpdir@^1.0.0, os-tmpdir@^1.0.1, os-tmpdir@~1.0.1, os-tmpdir@~1.0.2:
+os-tmpdir@^1.0.0, os-tmpdir@^1.0.1, os-tmpdir@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
 
@@ -4994,6 +5014,15 @@ react-transform-hmr@^1.0.4:
 react@16.1.1:
   version "16.1.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.1.1.tgz#d5c4ef795507e3012282dd51261ff9c0e824fe1f"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
+
+react@^16.0.0:
+  version "16.2.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -5910,12 +5939,6 @@ tmp@^0.0.31:
   dependencies:
     os-tmpdir "~1.0.1"
 
-tmp@^0.0.33:
-  version "0.0.33"
-  resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
-  dependencies:
-    os-tmpdir "~1.0.2"
-
 tmpl@1.0.x:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
@@ -6383,9 +6406,9 @@ xdl@47.0.4:
     xmldom "^0.1.27"
     yesno "^0.0.1"
 
-xdl@47.0.6:
-  version "47.0.6"
-  resolved "https://registry.yarnpkg.com/xdl/-/xdl-47.0.6.tgz#069472a00ee09ddaa1f58ba3e40ed8872a2ce79b"
+xdl@48.0.1:
+  version "48.0.1"
+  resolved "https://registry.yarnpkg.com/xdl/-/xdl-48.0.1.tgz#b90d288086db9a520f2b67ae499cb3fc068dcc9c"
   dependencies:
     "@expo/bunyan" "^1.8.10"
     "@expo/json-file" "^5.3.0"
@@ -6431,9 +6454,11 @@ xdl@47.0.6:
     ncp "^2.0.0"
     opn "^4.0.2"
     plist "2.1.0"
+    prop-types "^15.5.10"
     querystring "^0.2.0"
     raven "^2.1.1"
     raven-js "^3.17.0"
+    react "^16.0.0"
     react-redux "^5.0.2"
     read-chunk "^2.0.0"
     redux "^3.6.0"
