@@ -1,0 +1,27 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: expo
+    versions:
+    - 40.0.1
+    - 41.0.0
+  - dependency-name: auth0
+    versions:
+    - 2.32.0
+    - 2.33.0
+    - 2.34.0
+    - 2.34.1
+  - dependency-name: react-native
+    versions:
+    - 0.63.4
+  - dependency-name: jest-expo
+    versions:
+    - 38.0.2
+  - dependency-name: handlebars
+    versions:
+    - 4.7.6
